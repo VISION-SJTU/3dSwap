@@ -21,7 +21,7 @@ To inference on CelebA-HD dataset, please down our preprocessed data from https:
 Please contact the authors of EG3D for their data preprocessing code if you want to test on your own images.
 
 ## Inference
-Download our pretrained model from https://drive.google.com/drive/folders/1rlZRO-pjKFedmx6-3QdSxxThN_jXA6Pb?usp=sharing. 
+Download our pretrained model from https://drive.google.com/drive/folders/1rlZRO-pjKFedmx6-3QdSxxThN_jXA6Pb?usp=sharing. Put "model_ir_se50.pth" under the models folder and other files under the checkpoints folder.
 
 ```.bash
 python run_3dSwap.py
