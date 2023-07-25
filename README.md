@@ -14,14 +14,16 @@ Abstract: *Face swapping is an important research topic in computer vision with 
   - `conda activate 3dSwap`
 
 ## Datasets preparation
-We preprocess the images from original FFHQ and CelebA-HD dataset with the data preprocessing code from **[EG3D](https://github.com/NVlabs/eg3d)**, including re-cropping the images and extracting according camera poses.
+* We preprocess the images from the original FFHQ and CelebA-HD dataset with the data preprocessing code from **[EG3D](https://github.com/NVlabs/eg3d)**, including re-cropping the images and extracting according camera poses.
 
-To inference on CelebA-HD dataset, please down our preprocessed data from https://drive.google.com/drive/folders/1p8LPK23ZTSztZ2noPiz-XWcefvqe-f0r?usp=sharing.
+  - To test on CelebA-HD dataset, please down our preprocessed data from [here](https://drive.google.com/drive/folders/1p8LPK23ZTSztZ2noPiz-XWcefvqe-f0r?usp=sharing).
 
-Please contact the authors of EG3D for their data preprocessing code if you want to test on your own images.
+  - To test on your own images, please refer to the data preprocessing file of EG3D [here](https://github.com/NVlabs/eg3d/blob/main/dataset_preprocessing/ffhq/preprocess_in_the_wild.py).
 
 ## Inference
-Download our pretrained model from https://drive.google.com/drive/folders/1rlZRO-pjKFedmx6-3QdSxxThN_jXA6Pb?usp=sharing. Put "model_ir_se50.pth" under the models folder and other files under the checkpoints folder.
+Download our pretrained model from [here](https://drive.google.com/drive/folders/1rlZRO-pjKFedmx6-3QdSxxThN_jXA6Pb?usp=sharing). Put model_ir_se50.pth under the "models" folder and other files under the "checkpoints" folder.
+
+Then run:
 
 ```.bash
 python run_3dSwap.py
