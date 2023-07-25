@@ -13,6 +13,9 @@ Abstract: *Face swapping is an important research topic in computer vision with 
   - `conda env create -f environment.yaml`
   - `conda activate 3dSwap`
 
+* Or you can use pip:
+  - `pip install -r requirements.txt`
+
 ## Datasets preparation
 * We preprocess the images from the original FFHQ and CelebA-HD dataset with the data preprocessing code from **[EG3D](https://github.com/NVlabs/eg3d)**, including re-cropping the images and extracting according camera poses.
 
