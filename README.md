@@ -1,4 +1,4 @@
-## 3D-Aware Face Swapping<br><sub>Official PyTorch implementation of the CVPR 2023 paper</sub>
+## 3D-Aware Face Swapping<br><sub>Official PyTorch implementation of the CVPR 2023 paper "3D-Aware Face Swapping"</sub>
 
 ![Teaser image](images/teaser.png)
 
