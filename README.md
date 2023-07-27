@@ -32,6 +32,11 @@ Then run:
 python run_3dSwap.py
 ```
 
+If you only want to perform the 3D GAN inversion without face swapping, run:
+
+```.bash
+python run_inversion.py
+```
 
 ## Citation
 
