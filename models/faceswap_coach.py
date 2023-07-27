@@ -63,7 +63,7 @@ def gen_mask():
 
 
 def configure_optimizers(networks, lr=3e-4):
-    params = list(networks.backbone.parameters()) + list(networks.renderer.parameters()) + list(networks.decoder.parameters())sbd
+    params = list(networks.backbone.parameters()) + list(networks.renderer.parameters()) + list(networks.decoder.parameters())
     optimizer = torch.optim.Adam([{'params': params}], lr=lr)
     return optimizer
 
@@ -296,5 +296,5 @@ class FaceSwapCoach:
         imgs.append(yhat_in)
 
         img = torch.cat(imgs, dim=2)
-        PIL.Image.fromarray(img[0].cpu().numpy(), 'RGB').save(f'output/' + name + '.png')
+        PIL.Image.fromarray(img[0].cpu().numpy(), 'RGB').save(f'output/faceswap' + name + '.png')
         self.gen_shape(ws, name)
