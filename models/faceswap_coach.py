@@ -62,10 +62,8 @@ def gen_mask():
     return mask
 
 
-def configure_optimizers(networks, lr=3e-4, encoder=None):
-    params = list(networks.backbone.parameters()) + list(networks.renderer.parameters()) + list(networks.decoder.parameters())
-    if encoder:
-        params += list(encoder.parameters())
+def configure_optimizers(networks, lr=3e-4):
+    params = list(networks.backbone.parameters()) + list(networks.renderer.parameters()) + list(networks.decoder.parameters())sbd
     optimizer = torch.optim.Adam([{'params': params}], lr=lr)
     return optimizer
 
