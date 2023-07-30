@@ -1,6 +1,5 @@
 import torch
 from torch import nn
-from configs.paths_config import model_paths
 from models.encoders.model_irse import Backbone
 import sys
 
@@ -12,7 +11,7 @@ class IDLoss(nn.Module):
     def __init__(self):
         super(IDLoss, self).__init__()
         self.facenet = Backbone(input_size=112, num_layers=50, drop_ratio=0.4, mode='ir_se')
-        self.facenet.load_state_dict(torch.load(model_paths['ir_se50']))
+        self.facenet.load_state_dict(torch.load('models/model_ir_se50.pth'))
         self.face_pool = torch.nn.AdaptiveAvgPool2d((112, 112))
 
     def extract_feats(self, x):

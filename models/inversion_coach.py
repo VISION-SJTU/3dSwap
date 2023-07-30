@@ -1,8 +1,8 @@
 from models.encoders.psp_encoders import GradualStyleEncoder
 import torch
 import dnnlib
-import legacy
-from camera_utils import FOV_to_intrinsics, LookAtPoseSampler
+from utils import legacy
+from utils.camera_utils import FOV_to_intrinsics, LookAtPoseSampler
 import numpy as np
 import PIL.Image
 import torch.nn.functional as F

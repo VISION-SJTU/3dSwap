@@ -1,8 +1,8 @@
 from models.encoders.psp_encoders import GradualStyleEncoder
 import torch
 import dnnlib
-import legacy
-from camera_utils import FOV_to_intrinsics, LookAtPoseSampler
+from utils import legacy
+from utils.camera_utils import FOV_to_intrinsics, LookAtPoseSampler
 import numpy as np
 import PIL.Image
 import torch.nn.functional as F
@@ -237,9 +237,9 @@ class FaceSwapCoach:
         if shape_format == '.ply':
             from shape_utils import convert_sdf_samples_to_ply
             convert_sdf_samples_to_ply(np.transpose(sigmas, (2, 1, 0)), [0, 0, 0], 1,
-                                       os.path.join('output', name + '.ply'), level=10)
+                                       os.path.join('output/faceswap/', name + '.ply'), level=10)
         elif shape_format == '.mrc':
-            with mrcfile.new_mmap(os.path.join('output', name + '.mrc'), overwrite=True, shape=sigmas.shape,
+            with mrcfile.new_mmap(os.path.join('output/faceswap/', name + '.mrc'), overwrite=True, shape=sigmas.shape,
                                   mrc_mode=2) as mrc:
                 mrc.data[:] = sigmas
 
@@ -296,5 +296,5 @@ class FaceSwapCoach:
         imgs.append(yhat_in)
 
         img = torch.cat(imgs, dim=2)
-        PIL.Image.fromarray(img[0].cpu().numpy(), 'RGB').save(f'output/faceswap' + name + '.png')
+        PIL.Image.fromarray(img[0].cpu().numpy(), 'RGB').save(f'output/faceswap/' + name + '.png')
         self.gen_shape(ws, name)
