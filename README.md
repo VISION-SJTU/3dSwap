@@ -16,12 +16,12 @@ Abstract: *Face swapping is an important research topic in computer vision with 
 ## Datasets preparation
 * We preprocess the images from the original FFHQ and CelebA-HD dataset with the data preprocessing code from **[EG3D](https://github.com/NVlabs/eg3d)**, including re-cropping the images and extracting according camera poses.
 
-  - To test on CelebA-HD dataset, please down our preprocessed data from [here](https://drive.google.com/drive/folders/1p8LPK23ZTSztZ2noPiz-XWcefvqe-f0r?usp=sharing).
+  - To test on CelebA-HD dataset, please down our preprocessed data from [here](https://pan.baidu.com/s/1Qgru1Tyg3DkclnPny0gjhw?pwd=swap).
 
   - To test on your own images, please refer to the data preprocessing file of EG3D [here](https://github.com/NVlabs/eg3d/blob/main/dataset_preprocessing/ffhq/preprocess_in_the_wild.py).
 
 ## Inference
-Download our pretrained model from [here](https://drive.google.com/drive/folders/1rlZRO-pjKFedmx6-3QdSxxThN_jXA6Pb?usp=sharing). Put model_ir_se50.pth under the "models" folder and other files under the "checkpoints" folder.
+Download our pretrained model from [here](https://pan.baidu.com/s/1yEJ8-4SLUdDDs9SEE-1hpA?pwd=swap). Put model_ir_se50.pth under the "models" folder and other files under the "checkpoints" folder.
 
 Then run:
 
@@ -36,7 +36,7 @@ python run_inversion.py
 ```
 ## Training
 
-First, download the preprocessed FFHQ dataset from [here](https://drive.google.com/drive/folders/1p8LPK23ZTSztZ2noPiz-XWcefvqe-f0r?usp=sharing) and put it under the "datasets" folder.
+First, download the preprocessed FFHQ dataset from [here](https://pan.baidu.com/s/1Qgru1Tyg3DkclnPny0gjhw?pwd=swap) and put it under the "datasets" folder.
 
 To train the inversion module, run:
 
