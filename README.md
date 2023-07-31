@@ -21,7 +21,7 @@ Abstract: *Face swapping is an important research topic in computer vision with 
   - To test on your own images, please refer to the data preprocessing file of EG3D [here](https://github.com/NVlabs/eg3d/blob/main/dataset_preprocessing/ffhq/preprocess_in_the_wild.py).
 
 ## Inference
-Download our pretrained model from [here](https://pan.baidu.com/s/1yEJ8-4SLUdDDs9SEE-1hpA?pwd=swap). Put model_ir_se50.pth under the "models" folder and other files under the "checkpoints" folder.
+Download our pretrained model from [Baidu Disk](https://pan.baidu.com/s/1yEJ8-4SLUdDDs9SEE-1hpA?pwd=swap) or [Goole Drive](https://drive.google.com/drive/folders/1rlZRO-pjKFedmx6-3QdSxxThN_jXA6Pb?usp=drive_link). Put model_ir_se50.pth under the "models" folder and other files under the "checkpoints" folder.
 
 Then run:
 
