@@ -235,7 +235,7 @@ class FaceSwapCoach:
         sigmas[:, :, -pad:] = pad_value
 
         if shape_format == '.ply':
-            from shape_utils import convert_sdf_samples_to_ply
+            from utils.shape_utils import convert_sdf_samples_to_ply
             convert_sdf_samples_to_ply(np.transpose(sigmas, (2, 1, 0)), [0, 0, 0], 1,
                                        os.path.join('output/faceswap/', name + '.ply'), level=10)
         elif shape_format == '.mrc':
@@ -244,7 +244,9 @@ class FaceSwapCoach:
                 mrc.data[:] = sigmas
 
     def run(self, args):
-        in_name, out_name = str(args.from_index), str(args.to_index)
+        # in_name, out_name = str(args.from_index), str(args.to_index)
+        in_name = 'gsy_src_2'
+        out_name = 'gsy_tar_1'
         name = in_name + '_' + out_name
 
         in_image = load_image(osp.join(args.dataroot, 'final_crops', in_name + '.jpg'), self.device)
@@ -294,7 +296,7 @@ class FaceSwapCoach:
 
         imgs.append(yhat_out)
         imgs.append(yhat_in)
-
         img = torch.cat(imgs, dim=2)
+        
         PIL.Image.fromarray(img[0].cpu().numpy(), 'RGB').save(f'output/faceswap/' + name + '.png')
         self.gen_shape(ws, name)

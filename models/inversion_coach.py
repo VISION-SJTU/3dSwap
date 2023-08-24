@@ -111,7 +111,7 @@ class InversionCoach:
         sigmas[:, :, -pad:] = pad_value
 
         if shape_format == '.ply':
-            from shape_utils import convert_sdf_samples_to_ply
+            from utils.shape_utils import convert_sdf_samples_to_ply
             convert_sdf_samples_to_ply(np.transpose(sigmas, (2, 1, 0)), [0, 0, 0], 1,
                                        os.path.join('output/inversion/', name + '.ply'), level=10)
         elif shape_format == '.mrc':
